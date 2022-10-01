@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function runUIIfReady() {
+                if (window.scriptLoaded && window.domContentLoaded) {
+                    document.getElementById('run-button').addEventListener('click', onRunClick);
+                }
+            }
+
+            function onScriptLoaded() {
+                window.scriptLoaded = true;
+                runUIIfReady();
+            }
+
+            function onDOMContentLoaded() {
+                window.domContentLoaded = true;
+                runUIIfReady();
+            }
+
+            document.addEventListener('DOMContentLoaded', onDOMContentLoaded);
+        </script>
+        <script type="text/javascript" src="script.js" onload="onScriptLoaded()"></script>
+    </head>
+    <body>
+        <button id="run-button">Run</button>
+    </body>
+</html>
