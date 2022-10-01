@@ -19,7 +19,7 @@ function onRunClick() {
     }
 
     const amountToBuy = usdAmount / btcPrice;
-    alert(`You can buy ${amountToBuy} BTC.`)
+    alert(`You can buy ${amountToBuy} BTC.`);
 }
 
 const MAX_AMOUNT = 1000000000;
