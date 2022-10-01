@@ -1,5 +1,5 @@
 function onRunClick() {
-    const usdAmount = enterAmount('How many USD do you have?');
+    const usdAmount = enterAmount('How many USD do you have?', null);
     if (usdAmount === null) return;
     if (usdAmount === 0) {
         alert("You can't buy any BTC.");
