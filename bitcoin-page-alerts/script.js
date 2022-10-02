@@ -45,7 +45,7 @@ function enterAmount(message, firstSentence) {
 
         let inputInvalid = false;
         for (let i = 0; i < input.length; i++) {
-            if (input[i] !== '.' && input[i] < '0' && input[i] > '9') {
+            if (!(input[i] === '.' || (input[i] >= '0' && input[i] <= '9'))) {
                 inputInvalid = true;
                 break;
             }
