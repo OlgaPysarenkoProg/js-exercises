@@ -4,7 +4,9 @@ const MAX_AMOUNT = 1000000000;
 function parseAmount(text) {
     // returns null if a text can't be parsed as an amount
     for (let i = 0; i < text.length; i++) {
-        if (text[i] !== '.' && text[i] < '0' && text[i] > '9') return null;
+        if (!(input[i] === '.' || (input[i] >= '0' && input[i] <= '9'))) {
+            return null;
+        }
     }
     const amount = Number(text);
     if (amount > MAX_AMOUNT || Math.trunc(amount * 100) !== amount * 100) {
